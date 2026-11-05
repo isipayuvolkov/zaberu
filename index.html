@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заберу — Доставка и пункты выдачи</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo-wrap">
+                <img class="logo-text" src="img\logo.png"></img>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link">Тарифы</a>
+                <a href="tracking.php" class="nav-link">Отследить</a>
+                <a href="delivery.html" class="nav-link">Доставка</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            <div>
+                <a href="check_auth.php" class="btn-primary">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div>
+                    <span class="badge">
+                        Служба доставки нового поколения
+                    </span>
+                    <h1 class="hero-title">
+                        Быстрая и надежная <span class="text-orange">доставка</span> ваших заказов.
+                    </h1>
+                    <p class="hero-desc">
+                        Доставим всё. В срок. С гарантией. Современная сеть пунктов выдачи заказов и экспресс-логистика для вашего бизнеса и покупок.
+                    </p>
+                    <div class="track-box">
+                        <input type="text" id="trackInput" placeholder="Введите трек-номер" class="track-input">
+                        <button onclick="trackParcel()" class="btn-dark">
+                            Найти посылку
+                        </button>
+                    </div>
+                    <div id="trackResult" class="track-result hidden"></div>
+                </div>
+                <div class="hero-card-wrapper">
+                    <div class="status-card">
+                        <div class="status-badge">
+                            ⚡ Быстро 24/7
+                        </div>
+                        <h3 class="status-title">Статус отправления</h3>
+                        <div class="status-list">
+                            <div class="status-item-green">
+                                <div class="status-icon-green">✓</div>
+                                <div>
+                                    <p class="status-sub">Принято на складе</p>
+                                    <p class="status-main">Москва, СЦ-1</p>
+                                </div>
+                            </div>
+                            <div class="status-item-orange">
+                                <div class="status-icon-orange">📦</div>
+                                <div>
+                                    <p class="status-sub-orange">В пути в пункт выдачи</p>
+                                    <p class="status-main">Прибудет завтра до 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2 class="section-title">Почему выбирают «Заберу»</h2>
+                <p class="section-desc">Мы создали идеальные условия для быстрой выдачи и отправки заказов любого типа.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 class="service-title">Скорость</h3>
+                    <p class="service-text">Моментальная обработка посылок на складе и быстрая логистика между пунктами выдачи.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3 class="service-title">Безопасность</h3>
+                    <p class="service-text">Полная материальная ответственность и выдача по защищенному коду из СМС.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3 class="service-title">Удобное расположение</h3>
+                    <p class="service-text">Пункты выдачи заказов в шаговой доступности с удобными парковками и примерочными.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="calculator" class="calc-section">
+        <div class="calc-container">
+            <div class="calc-card">
+                <h2 class="calc-title">Калькулятор стоимости и сроков</h2>
+                <div class="calc-grid">
+                    <div>
+                        <label class="calc-label">Откуда</label>
+                        <select class="calc-select">
+                            <option>Москва</option>
+                            <option>Санкт-Петербург</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="calc-label">Куда</label>
+                        <select class="calc-select">
+                            <option>Краснодар</option>
+                            <option>Екатеринбург</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc-weight-wrap">
+                    <label class="calc-label">Вес посылки (кг)</label>
+                    <input type="number" value="1" min="0.1" max="50" class="calc-input">
+                </div>
+                <button onclick="calculateDelivery()" class="btn-calc">
+                    Рассчитать стоимость
+                </button>
+                <div id="calcResult" class="calc-result hidden">
+                    Срок доставки: 2-3 дня. Ориентировочная стоимость: 350 ₽
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contacts" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-title" src="img\logo-foot.png"></img>
+                </div>
+                <p class="footer-copy">© 2026 Сервис выдачи заказов «Заберу». Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Навигация</h4>
+                <div class="footer-nav-list">
+                    <a href="index.html" class="footer-link">Главная страница</a>
+                    <a href="catalog.html" class="footer-link">Каталог услуг / Тарифы</a>
+                    <a href="tracking.php" class="footer-link">Отслеживание посылки</a>
+                    
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Аккаунт и Заказы</h4>
+                <div class="footer-nav-list">
+                    <a href="check_auth.php" class="footer-link">Авторизация / Личный кабинет</a>
+                    <a href="register.php" class="footer-link">Регистрация</a>
+                    <a href="checkout.php" class="footer-link">Оформление заказа</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Информация</h4>
+                <div class="footer-nav-list">
+                    <a href="delivery.html" class="footer-link">Доставка и оплата</a>
+                    <a href="contacts.html" class="footer-link">Контакты</a>
+                    <a href="faq.php" class="footer-link">Частые вопросы (FAQ) / Отзывы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function trackParcel() {
+            const input = document.getElementById('trackInput').value;
+            const res = document.getElementById('trackResult');
+            if(input.trim() !== '') {
+                res.classList.remove('hidden');
+                res.innerHTML = `Посылка "${input}" найдена: Статус - В пути в пункт выдачи.`;
+            } else {
+                alert('Пожалуйста, введите трек-номер');
+            }
+        }
+        function calculateDelivery() {
+            const res = document.getElementById('calcResult');
+            res.classList.remove('hidden');
+        }
+        function openModal() {
+            alert('Открытие формы авторизации.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заберу — Контакты и поддержка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo-wrap">
+                <img class="logo-text" src="img\logo.png"></img>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link">Тарифы</a>
+                <a href="tracking.php" class="nav-link">Отследить</a>
+                <a href="delivery.html" class="nav-link">Доставка</a>
+                <a href="contacts.html" class="nav-link active">Контакты</a>
+            </nav>
+            <div>
+                <a href="check_auth.php" class="btn-primary">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header-section">
+            <div class="hero-container">
+                <span class="badge">Связь с нами</span>
+                <h1 class="hero-title">Наши <span class="text-orange">контакты</span></h1>
+                <p class="hero-desc">Головной офис, служба поддержки и каналы связи для клиентов и партнеров сервиса «Заберу».</p>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="hero-container">
+                <div class="contacts-grid">
+                    <div class="delivery-card">
+                        <div class="tariff-icon">🏢</div>
+                        <h3 class="tariff-title">Головной офис</h3>
+                        <p class="tariff-desc">Адрес главного офиса компании для деловой корреспонденции и партнеров.</p>
+                        <ul class="tariff-list">
+                            <li>г. Москва, ул. Логистическая, д. 15, стр. 1</li>
+                            <li>Режим работы: Пн–Пт с 9:00 до 18:00</li>
+                            <li>Email: partner@zaberu.ru</li>
+                        </ul>
+                    </div>
+
+                    <div class="delivery-card">
+                        <div class="tariff-icon">🎧</div>
+                        <h3 class="tariff-title">Служба поддержки</h3>
+                        <p class="tariff-desc">Мы на связи круглосуточно, чтобы оперативно помочь по любым вопросам.</p>
+                        <ul class="tariff-list">
+                            <li>Телефон: 8 (800) 555-35-35 (бесплатно по РФ)</li>
+                            <li>Режим работы поддержки: Круглосуточно 24/7</li>
+                            <li>Telegram / WhatsApp: @zaberu_support</li>
+                        </ul>
+                    </div>
+
+                    <div class="delivery-card">
+                        <div class="tariff-icon">💬</div>
+                        <h3 class="tariff-title">Обратная связь</h3>
+                        <p class="tariff-desc">Напишите нам, и наш специалист свяжется с вами в течение 15 минут.</p>
+                        <div class="feedback-form">
+                            <input type="text" placeholder="Ваше имя" class="calc-input mb-3">
+                            <input type="text" placeholder="Телефон или email" class="calc-input mb-3">
+                            <button onclick="alert('Сообщение отправлено! Мы свяжемся с вами.')" class="tariff-btn active-btn w-full">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-title" src="img\logo-foot.png"></img>
+                </div>
+                <p class="footer-copy">© 2026 Сервис выдачи заказов «Заберу». Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Навигация</h4>
+                <div class="footer-nav-list">
+                    <a href="index.html" class="footer-link">Главная страница</a>
+                    <a href="catalog.html" class="footer-link">Каталог услуг / Тарифы</a>
+                    <a href="tracking.php" class="footer-link">Отслеживание посылки</a>
+                    
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Аккаунт и Заказы</h4>
+                <div class="footer-nav-list">
+                    <a href="check_auth.php" class="footer-link">Авторизация / Личный кабинет</a>
+                    <a href="register.php" class="footer-link">Регистрация</a>
+                    <a href="checkout.php" class="footer-link">Оформление заказа</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Информация</h4>
+                <div class="footer-nav-list">
+                    <a href="delivery.html" class="footer-link">Доставка и оплата</a>
+                    <a href="contacts.html" class="footer-link">Контакты</a>
+                    <a href="faq.php" class="footer-link">Частые вопросы (FAQ) / Отзывы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

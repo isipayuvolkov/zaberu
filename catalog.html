@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заберу — Каталог услуг и тарифы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo-wrap">
+                <img class="logo-text" src="img\logo.png"></img>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link active">Тарифы</a>
+                <a href="tracking.php" class="nav-link">Отследить</a>
+                <a href="delivery.html" class="nav-link">Доставка</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            <div>
+                <a href="check_auth.php" class="btn-primary">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header-section">
+            <div class="hero-container">
+                <span class="badge">Услуги и логистика</span>
+                <h1 class="hero-title">Каталог услуг и <span class="text-orange">тарифы</span></h1>
+                <p class="hero-desc">Выберите подходящий формат выдачи, отправки или хранения заказов для вашего бизнеса и личных нужд.</p>
+            </div>
+        </section>
+
+        <section class="tariffs-section">
+            <div class="hero-container">
+                <div class="tariffs-grid">
+                    <div class="tariff-card">
+                        <div class="tariff-icon">📦</div>
+                        <h3 class="tariff-title">Выдача отправлений</h3>
+                        <p class="tariff-desc">Быстрое получение заказов из интернет-магазинов и маркетплейсов в ближайшем пункте.</p>
+                        <div class="tariff-price">Бесплатно*</div>
+                        <ul class="tariff-list">
+                            <li>Хранение до 7 дней бесплатно</li>
+                            <li>Примерочные в каждом пункте</li>
+                            <li>Выдача по коду из СМС за 1 минуту</li>
+                        </ul>
+                        <a href="checkout.php" class="tariff-btn">Выбрать пункт</a>
+                    </div>
+
+                    <div class="tariff-card featured">
+                        <div class="tariff-badge-top">Популярное</div>
+                        <div class="tariff-icon">🚀</div>
+                        <h3 class="tariff-title">Экспресс-доставка</h3>
+                        <p class="tariff-desc">Срочная доставка посылок и документов между пунктами выдачи сети «Заберу».</p>
+                        <div class="tariff-price">от 290 ₽</div>
+                        <ul class="tariff-list">
+                            <li>Срок доставки от 1 дня</li>
+                            <li>Страхование отправления</li>
+                            <li>Онлайн-трекинг 24/7</li>
+                        </ul>
+                        <a href="calculator.html" class="tariff-btn active-btn">Рассчитать тариф</a>
+                    </div>
+
+                    <div class="tariff-card">
+                        <div class="tariff-icon">🏢</div>
+                        <h3 class="tariff-title">Для бизнеса и ПВЗ</h3>
+                        <p class="tariff-desc">Интеграция для интернет-магазинов, хранение товаров и прием возвратов.</p>
+                        <div class="tariff-price">Индивидуально</div>
+                        <ul class="tariff-list">
+                            <li>API-интеграция с сайтом</li>
+                            <li>Личный кабинет юрлица</li>
+                            <li>Выделенный менеджер</li>
+                        </ul>
+                        <a href="contacts.html" class="tariff-btn">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="hero-container">
+                <div class="map-card">
+                    <h2 class="section-title text-center">Интерактивная карта пунктов выдачи</h2>
+                    <p class="section-desc text-center mb-6">Найдите ближайший пункт выдачи «Заберу» на карте вашего города</p>
+                    <div class="map-filters">
+                        <select class="calc-select">
+                            <option>Все города</option>
+                            <option>Москва</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Казань</option>
+                        </select>
+                        <select class="calc-select">
+                            <option>Режим работы: Круглосуточно</option>
+                            <option>С примерочной</option>
+                        </select>
+                    </div>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a192c7328906324901fbc65bc116f1a8e52dbcc5441e8e25d2c1c69df464a2f&source=constructor" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border-radius: 1rem; border: none;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-title" src="img\logo-foot.png"></img>
+                </div>
+                <p class="footer-copy">© 2026 Сервис выдачи заказов «Заберу». Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Навигация</h4>
+                <div class="footer-nav-list">
+                    <a href="index.html" class="footer-link">Главная страница</a>
+                    <a href="catalog.html" class="footer-link">Каталог услуг / Тарифы</a>
+                    <a href="tracking.php" class="footer-link">Отслеживание посылки</a>
+
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Аккаунт и Заказы</h4>
+                <div class="footer-nav-list">
+                    <a href="check_auth.php" class="footer-link">Авторизация / Личный кабинет</a>
+                    <a href="register.php" class="footer-link">Регистрация</a>
+                    <a href="checkout.php" class="footer-link">Оформление заказа</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Информация</h4>
+                <div class="footer-nav-list">
+                    <a href="delivery.html" class="footer-link">Доставка и оплата</a>
+                    <a href="contacts.html" class="footer-link">Контакты</a>
+                    <a href="faq.php" class="footer-link">Частые вопросы (FAQ) / Отзывы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

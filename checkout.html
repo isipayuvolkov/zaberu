@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заберу — Оформление заказа</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo-wrap">
+                <img class="logo-text" src="img\logo.png" alt="Заберу">
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link">Тарифы</a>
+                <a href="tracking.php" class="nav-link">Отследить</a>
+                <a href="delivery.html" class="nav-link">Доставка</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            <div>
+                <a href="check_auth.php" class="btn-primary">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header-section">
+            <div class="hero-container">
+                <span class="badge">Для юридических лиц и партнеров</span>
+                <h1 class="hero-title">Оформление <span class="text-orange">заказа</span></h1>
+                <p class="hero-desc">Интеграция для интернет-магазинов, выбор пункта выдачи и генерация трек-номера отправления.</p>
+            </div>
+        </section>
+
+        <section class="checkout-section">
+            <div class="hero-container">
+                <div class="checkout-grid">
+                    <div class="delivery-card">
+                        <h3 class="tariff-title mb-4">1. Выбор пункта выдачи на карте</h3>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">Выберите город</label>
+                            <select class="calc-select">
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Казань</option>
+                            </select>
+                        </div>
+                        <div class="map-placeholder" style="height: 220px; margin-top: 1rem;">
+                            <iframe 
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a192c7328906324901fbc65bc116f1a8e52dbcc5441e8e25d2c1c69df464a2f&source=constructor" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                style="border-radius: 1rem; border: none;">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="delivery-card">
+                        <h3 class="tariff-title mb-4">2. Данные отправителя и отправка</h3>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">Название магазина / Юрлицо</label>
+                            <input type="text" placeholder="ИП «Интернет-Магазин»" class="calc-input">
+                        </div>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">Вес отправления (кг)</label>
+                            <input type="number" value="1" min="0.1" max="50" class="calc-input">
+                        </div>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">ФИО получателя</label>
+                            <input type="text" placeholder="Иванов Иван Иванович" class="calc-input">
+                        </div>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">Номер телефона</label>
+                            <input type="text" placeholder="+7 (999) 000-00-00" class="calc-input">
+                        </div>
+                        <div class="calc-weight-wrap">
+                            <label class="calc-label">Email для уведомлений</label>
+                            <input type="email" placeholder="client@example.com" class="calc-input">
+                        </div>
+                        <button onclick="alert('Заказ успешно подтвержден! Трек-номер: ZAB-884920 сгенерирован.')" class="tariff-btn active-btn w-full mt-4">Подтвердить и сгенерировать трек-номер</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-title" src="img\logo-foot.png" alt="Заберу">
+                </div>
+                <p class="footer-copy">© 2026 Сервис выдачи заказов «Заберу». Все права защищены.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Навигация</h4>
+                <div class="footer-nav-list">
+                    <a href="index.html" class="footer-link">Главная страница</a>
+                    <a href="catalog.html" class="footer-link">Каталог услуг / Тарифы</a>
+                    <a href="tracking.php" class="footer-link">Отслеживание посылки</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Аккаунт и Заказы</h4>
+                <div class="footer-nav-list">
+                    <a href="check_auth.php" class="footer-link">Авторизация / Личный кабинет</a>
+                    <a href="register.php" class="footer-link">Регистрация</a>
+                    <a href="checkout.php" class="footer-link">Оформление заказа</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Информация</h4>
+                <div class="footer-nav-list">
+                    <a href="delivery.html" class="footer-link">Доставка и оплата</a>
+                    <a href="contacts.html" class="footer-link">Контакты</a>
+                    <a href="faq.php" class="footer-link">Частые вопросы (FAQ) / Отзывы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
